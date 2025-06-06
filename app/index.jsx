@@ -10,6 +10,8 @@ const Home =()=>{
             Reading List App
         </Text>
         <Link href="/about" style={styles.link}>About Us</Link>
+        <Link href="/home" style={styles.link}>Go to Home Page</Link>
+        <Link href="/contact" style={styles.link}>Contact Us</Link>
         </View>
     );
 }

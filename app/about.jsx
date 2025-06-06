@@ -9,6 +9,8 @@
                 This is a Reading List App
             </Text>
             <Link href="/" styles={styles.link}>Go Back Home</Link>
+            
+            <Link href="/contact" styles={styles.link}>Go to Contact Page</Link>
         </View>
 
     )
