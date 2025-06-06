@@ -9,7 +9,7 @@ const Home =()=>{
         <Text style={{marginTop: 10, marginBottom: 30, color:'red'}}>
             Reading List App
         </Text>
-        <Link href="/about">Go to About Us</Link>
+        <Link href="/about" style={styles.link}>About Us</Link>
         </View>
     );
 }
@@ -29,5 +29,9 @@ const styles = StyleSheet.create({
         boxShadow:'4px 4px',
       width: 100,
       height: 100
+    },
+     link:{
+        marginVertical:10,
+        borderBottomWidth: 1,
     }
 });
