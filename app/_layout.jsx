@@ -3,10 +3,13 @@ import { StyleSheet, Text, View } from "react-native";
 
 const RootLayout=()=>{
 return(
-    <View style={{flex:1}}>
-        <Stack />
-        <Text>Footer</Text>
-    </View>
+    
+   <Stack >
+  <Stack.Screen name="index" options={{title:"Home"}}/>
+  <Stack.Screen name="about" options={{title:"About Us"}}/>
+  <Stack.Screen name="contact" options={{title:"Contact Us", headerShown: false}}/>
+   </Stack>
+
 )
 }
 export default RootLayout;
