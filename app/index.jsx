@@ -4,6 +4,7 @@ import { Link } from 'expo-router'
 import Logo from '../assets/img/logo_light.png';
 import ThemedView from '../components/ThemedView';
 import ThemedLogo from '../components/ThemedLogo';
+import Spacer from '../components/Spacer';
 
 const Home = () => {
   return (
@@ -11,11 +12,9 @@ const Home = () => {
       <ThemedLogo  style={styles.img} />
 
       <Text style={styles.title}>The Number 1</Text>
-
-      <Text style={{ marginTop: 10, marginBottom: 30 }}>
-        Reading List App
-      </Text>
-
+       <Spacer height={10}/>
+      <Text> Reading List App </Text>
+       <Spacer/>
       <Link href="/about" style={styles.link}>About Page</Link>
       <Link href="/contact" style={styles.link}>Contact Page</Link>
     </ThemedView>
