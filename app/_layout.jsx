@@ -41,7 +41,7 @@ export default function RootLayout() {
         headerStyle: { backgroundColor: theme.navBackground },
         headerTintColor: theme.title,
       }}>
-        {/* Individual Screens */}
+       <Stack.Screen name="(auth)" options={{ headerShown: false }} />
         <Stack.Screen name="index" options={{ title: "Home" }} />
 
       </Stack>

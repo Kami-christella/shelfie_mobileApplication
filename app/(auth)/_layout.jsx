@@ -8,7 +8,7 @@ export default function AuthLayout() {
       <Stack
         screenOptions={{
             animation: 'fade_from_bottom',
-          headerShown: false, // Hide the header for auth screens
+           // Hide the header for auth screens
         }}
       >
         {/* Auth Screens */}
