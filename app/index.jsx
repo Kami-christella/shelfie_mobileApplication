@@ -1,13 +1,14 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import { Link } from 'expo-router'
 
-import Logo from '../assets/img/1.png';
+import Logo from '../assets/img/logo_light.png';
 import ThemedView from '../components/ThemedView';
+import ThemedLogo from '../components/ThemedLogo';
 
 const Home = () => {
   return (
     <ThemedView style={styles.container}>
-      <Image source={Logo} style={styles.img} />
+      <ThemedLogo  style={styles.img} />
 
       <Text style={styles.title}>The Number 1</Text>
 
@@ -45,3 +46,5 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1
   }
 })
+
+
