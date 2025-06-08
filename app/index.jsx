@@ -1,7 +1,5 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import { Link } from 'expo-router'
-
-import Logo from '../assets/img/logo_light.png';
 import ThemedView from '../components/ThemedView';
 import ThemedLogo from '../components/ThemedLogo';
 import ThemedText from '../components/ThemedText';
