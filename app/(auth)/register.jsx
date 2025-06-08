@@ -9,7 +9,6 @@ import {Colors} from "../../constants/Colors";
 const Register =()=>{
 
     const handleSubmit = () => {
-        // Handle login logic here
         console.log("Register Form submitted");
     }
     return (
