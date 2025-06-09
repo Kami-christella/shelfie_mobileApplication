@@ -4,6 +4,7 @@ import ThemedView from '../components/ThemedView';
 import ThemedLogo from '../components/ThemedLogo';
 import ThemedText from '../components/ThemedText';
 import Spacer from '../components/Spacer';
+import Profile from './(dashboard)/profile';
 
 const Home = () => {
   return (
@@ -21,6 +22,9 @@ const Home = () => {
       </Link>
       <Link href="/register" style={styles.link}>
         <ThemedText>Register Page</ThemedText>
+      </Link>
+       <Link href="/profile" style={styles.link}>
+        <ThemedText>Profile Page</ThemedText>
       </Link>
 
     </ThemedView>
