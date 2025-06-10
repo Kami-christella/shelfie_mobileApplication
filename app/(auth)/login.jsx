@@ -13,11 +13,15 @@ const Login = () => {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
 
-  const {user} =useUser
+  const {login} =useUser()
 
   const handleSubmit = async () => {
-    console.log("Current User:", user)
-    console.log('login form submitted: ', email, password)
+     try{
+        await login(email,password)
+        console.log("Current user is:", user)
+      }catch(error){
+
+      }  
   }
 
   return (

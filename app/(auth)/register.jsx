@@ -7,13 +7,22 @@ import Spacer from "../../components/Spacer";
 import { Link } from "expo-router";
 import { useState } from 'react'
 import {Colors} from "../../constants/Colors";
+import { useUser } from "../../hooks/useUser";
 
 const Register =()=>{
-     const [email, setEmail] = useState("")
-      const [password, setPassword] = useState("")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
 
-    const handleSubmit = () => {
-        console.log("Register Form submitted", email, password);
+    const {register}= useUser()
+
+
+    const handleSubmit = async() => {
+      try{
+        await register(email,password)
+        console.log("Current user is:", user)
+      }catch(error){
+
+      }   
     }
     return (
         <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
