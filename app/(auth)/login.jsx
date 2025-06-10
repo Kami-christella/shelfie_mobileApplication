@@ -1,4 +1,4 @@
-import { StyleSheet, Pressable, Text } from "react-native";
+import { StyleSheet, Pressable, Text, TextInput } from "react-native";
 import ThemedText from "../../components/ThemedText";
 import ThemedView from "../../components/ThemedView";
 import ThemedButton from "../../components/ThemedButton";
@@ -18,6 +18,15 @@ const Login =()=>{
             <ThemedText title={true} style={styles.title}>
                 Login To Your Account
              </ThemedText>
+            <TextInput
+                placeholder="Email"
+                // style={styles.input}
+            />
+            {/* <TextInput
+                placeholder="Password"
+                secureTextEntry
+                style={styles.input}
+            /> */}
 
            <ThemedButton onPress={handleSubmit}>
             <Text style={{ color: '#f2f2f2'}}>Login</Text>
