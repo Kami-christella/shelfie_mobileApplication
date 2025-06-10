@@ -1,4 +1,4 @@
-import { StyleSheet, Pressable, Text } from "react-native";
+import { Keyboard, StyleSheet, Text, TouchableWithoutFeedback } from "react-native";
 import ThemedText from "../../components/ThemedText";
 import ThemedView from "../../components/ThemedView";
 import ThemedButton from "../../components/ThemedButton";
@@ -16,6 +16,7 @@ const Register =()=>{
         console.log("Register Form submitted", email, password);
     }
     return (
+        <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <ThemedView style={styles.container}>
 
             <Spacer/>
@@ -50,6 +51,7 @@ const Register =()=>{
                 </ThemedText>
             </Link>
         </ThemedView>
+        </TouchableWithoutFeedback>
     )
 }
 
