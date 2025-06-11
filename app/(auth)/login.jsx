@@ -1,4 +1,4 @@
-import { StyleSheet, Text, Keyboard, TouchableWithoutFeedback, TextInput, ActivityIndicator } from 'react-native'
+import { StyleSheet, Text, Keyboard, TouchableWithoutFeedback } from 'react-native'
 import { Link } from 'expo-router'
 import { useState } from 'react'
 import { Colors } from '../../constants/Colors'

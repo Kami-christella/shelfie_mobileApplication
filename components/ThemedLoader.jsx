@@ -6,6 +6,7 @@ const ThemedLoader = ()=>{
     const theme= Colors [colorScheme] ?? Colors.light
 
     return (
-        <ActivityIndicator size="" color={theme.text}/>
+        <ActivityIndicator size="large" color={theme.text}/>
     )
 }
+export default ThemedLoader
