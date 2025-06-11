@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native'
+import { StyleSheet, Text } from 'react-native'
 import { useUser } from '../../hooks/useUser'
 import Spacer from "../../components/Spacer"
 import ThemedText from "../../components/ThemedText"
