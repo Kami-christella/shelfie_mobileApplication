@@ -9,11 +9,19 @@ import ThemedButton from '../../components/ThemedButton'
 
 const Profile = () => {
   const {logout, user} =useUser()
+    if (!user) {
+    return (
+      <ThemedView style={styles.container}>
+        <Text>Loading user data...</Text>
+      </ThemedView>
+    )
+  }
   return (
     <ThemedView style={styles.container}>
 
       <ThemedText title={true} style={styles.heading}>
-       {user.email}
+       {/* {user.email} */}
+       {user.email || "No email available"}
       </ThemedText>
       <Spacer />
       <ThemedButton onPress={logout}>

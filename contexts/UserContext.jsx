@@ -45,7 +45,7 @@ export function UserProvider ({children}){
         getInitialUserValue()
     }, [])
     return (
-        <UserContext.Provider value={{user, login, register, logout}}>
+        <UserContext.Provider value={{user,authChecked, login, register, logout}}>
                {children}
         </UserContext.Provider>
     )
