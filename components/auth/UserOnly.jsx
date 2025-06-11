@@ -65,6 +65,7 @@ import { useRouter } from "expo-router";
 import { useEffect } from "react";
 import { useUser } from "../../hooks/useUser";
 import { Text } from "react-native";
+import ThemedLoader from "../ThemedLoader";
 
 const UserOnly = ({ children }) => {
   const { user, authChecked } = useUser()
@@ -88,12 +89,18 @@ const UserOnly = ({ children }) => {
   // ✅ IMPORTANT: Don't render anything if user should be redirected
   if (authChecked && !user) {
     console.log('⏳ Should be redirecting...')
-    return <Text>Redirecting to login...</Text>
+    return (
+      <ThemedLoader/>
+    )
+    // return <Text>Redirecting to login...</Text>
   }
 
   // Show loading while checking
   if (!authChecked) {
-    return <Text>Loading...</Text>
+    // return <Text>Loading...</Text>
+    return (
+      <ThemedLoader/>
+    )
   }
 
   // Only render children if we have a user
@@ -101,8 +108,10 @@ const UserOnly = ({ children }) => {
     return children
   }
 
-  // Fallback
-  return <Text>Loading user data...</Text>
+  return (
+      <ThemedLoader/>
+    )
+  // return <Text>Loading user data...</Text>
 }
 
 export default UserOnly

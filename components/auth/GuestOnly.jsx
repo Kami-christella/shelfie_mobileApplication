@@ -22,7 +22,10 @@ const GuestOnly = ({ children }) => {
   // Show loading if authChecked is undefined or false
   if (authChecked !== true) {
     console.log('Showing loading because authChecked is:', authChecked)
-    return <Text>Loading</Text>
+    // return <Text>Loading</Text>
+    return (
+      <ThemedLoader/>
+    )
   }
 
   return children
