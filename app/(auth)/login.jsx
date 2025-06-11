@@ -1,9 +1,10 @@
-import { StyleSheet, Text, Keyboard, TouchableWithoutFeedback, TextInput } from 'react-native'
+import { StyleSheet, Text, Keyboard, TouchableWithoutFeedback, TextInput, ActivityIndicator } from 'react-native'
 import { Link } from 'expo-router'
 import { useState } from 'react'
 import { Colors } from '../../constants/Colors'
 import ThemedView from '../../components/ThemedView'
 import ThemedText from '../../components/ThemedText'
+import ThemedLoader from '../../components/ThemedLoader'
 import Spacer from '../../components/Spacer'
 import ThemedButton from '../../components/ThemedButton'
 import ThemedTextInput from "../../components/ThemedTextInput"
@@ -67,6 +68,7 @@ const Login = () => {
             Register instead
           </ThemedText>
         </Link>
+        <ThemedLoader/>
 
       </ThemedView>
     </TouchableWithoutFeedback>
