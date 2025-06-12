@@ -1,4 +1,8 @@
 import { createContext, useState } from "react";
+import { databases } from "../lib/appwrite";
+
+const DATABASE_ID="kamikazi"
+const COLLECTION_ID="684a6d00002eab70c037"
 
 export const BooksContext = createContext()
 
