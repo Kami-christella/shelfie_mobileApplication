@@ -4,6 +4,7 @@ import { useColorScheme } from "react-native"
 import { StatusBar } from "expo-status-bar"
 import { UserProvider } from "../contexts/UserContext"
 import { BooksProvider } from "../contexts/BooksContext"
+import Spacer from "../components/Spacer"
 
 export default function RootLayout() {
   const colorScheme = useColorScheme()
@@ -18,7 +19,8 @@ export default function RootLayout() {
         headerTintColor: theme.title,
       }}>
         {/* Individual Screens */}
-        <Stack.Screen name="index" options={{ title: "Home" }} />
+       
+        <Stack.Screen name="index" options={{ title: "Library MIS🎓", headerTitleAlign: "center", }} />
         <Stack.Screen name="about" options={{ title: "About" }} />
         <Stack.Screen name="contact" options={{ title: "Contact" }} />
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />

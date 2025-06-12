@@ -10,12 +10,12 @@ const Home = () => {
   return (
     <ThemedView style={styles.container}>
       <ThemedLogo/>
-      <Spacer height={20}/>
-      <ThemedText style={styles.title} title={true}>
-        The Number 1
-       </ThemedText>
+     
       <Spacer height={10}/>
-      <ThemedText> Reading List App </ThemedText>
+      <Text style={{marginLeft:10, color: '#fff'}}> Our library is a modern, user-friendly space designed to provide
+         easy access to a wide range of academic resources, digital books, and research tools for all 
+         learners. 
+         </Text> 
       <Spacer/>
       <Link href="/login" style={styles.link}>
         <ThemedText>Login Page</ThemedText>
