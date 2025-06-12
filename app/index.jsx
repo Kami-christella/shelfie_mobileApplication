@@ -4,6 +4,7 @@ import ThemedView from '../components/ThemedView';
 import ThemedLogo from '../components/ThemedLogo';
 import ThemedText from '../components/ThemedText';
 import Spacer from '../components/Spacer';
+import { Ionicons } from '@expo/vector-icons';
 import Profile from './(dashboard)/profile';
 
 const Home = () => {
@@ -16,13 +17,21 @@ const Home = () => {
          easy access to a wide range of academic resources, digital books, and research tools for all 
          learners. 
          </Text> 
+       
       <Spacer/>
-      <Link href="/login" style={styles.loginbtn}>
-        <ThemedText>Login Page</ThemedText>
-      </Link>
-      <Link href="/register" style={styles.link}>
-        <ThemedText>Register Page</ThemedText>
-      </Link>
+
+
+     <View style={styles.buttonContainer}>
+  <Link href="/login" style={styles.loginbtn}>
+  
+    <ThemedText>Login Page</ThemedText>
+  </Link>
+
+  <Link href="/register" style={styles.registerbtn}>
+    <ThemedText>Register Page</ThemedText>
+  </Link>
+</View>
+
        {/* <Link href="/profile" style={styles.link}>
         <ThemedText>Profile Page</ThemedText>
       </Link> */}
@@ -47,23 +56,43 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     borderBottomWidth: 1
   },
-  loginbtn:{
-     backgroundColor: '#55be52',
-  paddingVertical: 8,      
-  paddingHorizontal: 16,   
-  borderRadius: 6,        
-  marginVertical: 8,      
+  buttonContainer: {
+  flexDirection: 'row',     
+  justifyContent: 'space-between', 
+  paddingHorizontal: 20
+},
+
+loginbtn: {
+  backgroundColor: '#1e40af',
+  paddingVertical: 8,
+  paddingHorizontal: 16,
+  borderRadius: 6,
   borderBottomWidth: 1,
-  borderColor: '#4aa947',
+  borderColor: '#374151',
   alignItems: 'center',
   shadowColor: '#000',
-  shadowOffset: { width: 0, height: 1 },  
+  shadowOffset: { width: 0, height: 1 },
   shadowOpacity: 0.2,
   shadowRadius: 2,
-  elevation: 3,  
-  alignSelf: 'flex-start',
-  marginLeft:30          
-  }
+  elevation: 3,
+  marginRight: 10,         // Space between buttons
+},
+
+registerbtn: {
+  backgroundColor: '#7e3bca',
+  paddingVertical: 8,
+  paddingHorizontal: 16,
+  borderRadius: 6,
+  borderBottomWidth: 1,
+  borderColor: '#7e3bca',
+  alignItems: 'center',
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 1 },
+  shadowOpacity: 0.2,
+  shadowRadius: 2,
+  elevation: 3,
+}
+
 })
 
 

@@ -20,7 +20,7 @@ export default function RootLayout() {
       }}>
         {/* Individual Screens */}
        
-        <Stack.Screen name="index" options={{ title: "Library MIS🎓", headerTitleAlign: "center", }} />
+        <Stack.Screen name="index" options={{ title: "School Library 🎓", headerTitleAlign: "center", }} />
         <Stack.Screen name="about" options={{ title: "About" }} />
         <Stack.Screen name="contact" options={{ title: "Contact" }} />
           <Stack.Screen name="(auth)" options={{ headerShown: false }} />
