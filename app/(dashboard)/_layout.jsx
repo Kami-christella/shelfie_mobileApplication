@@ -49,6 +49,9 @@ const DashboardLayout = ({  }) => {
         />
     ) }} 
          />
+         <Tabs.Screen
+         
+         />
   
    </Tabs>
 </UserOnly>
