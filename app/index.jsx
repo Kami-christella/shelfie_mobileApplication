@@ -17,15 +17,15 @@ const Home = () => {
          learners. 
          </Text> 
       <Spacer/>
-      <Link href="/login" style={styles.link}>
+      <Link href="/login" style={styles.loginbtn}>
         <ThemedText>Login Page</ThemedText>
       </Link>
       <Link href="/register" style={styles.link}>
         <ThemedText>Register Page</ThemedText>
       </Link>
-       <Link href="/profile" style={styles.link}>
+       {/* <Link href="/profile" style={styles.link}>
         <ThemedText>Profile Page</ThemedText>
-      </Link>
+      </Link> */}
 
     </ThemedView>
   )
@@ -46,6 +46,23 @@ const styles = StyleSheet.create({
   link: {
     marginVertical: 10,
     borderBottomWidth: 1
+  },
+  loginbtn:{
+     backgroundColor: '#55be52',
+  paddingVertical: 8,      
+  paddingHorizontal: 16,   
+  borderRadius: 6,        
+  marginVertical: 8,      
+  borderBottomWidth: 1,
+  borderColor: '#4aa947',
+  alignItems: 'center',
+  shadowColor: '#000',
+  shadowOffset: { width: 0, height: 1 },  
+  shadowOpacity: 0.2,
+  shadowRadius: 2,
+  elevation: 3,  
+  alignSelf: 'flex-start',
+  marginLeft:30          
   }
 })
 
