@@ -3,12 +3,14 @@ import { useColorScheme } from 'react-native';
 import { Colors } from '../../constants/Colors';
 import { Ionicons } from '@expo/vector-icons';
 import UserOnly from '../../components/auth/UserOnly';
+import { ThemeProvider } from '../../contexts/ThemeContext';
 
 const DashboardLayout = ({  }) => {
     const colorScheme = useColorScheme();
     const theme=Colors[colorScheme] ?? Colors.light;
   return (
     <UserOnly>
+      <ThemeProvider>
    <Tabs
      screenOptions={{
        headerShown: false, 
@@ -49,6 +51,16 @@ const DashboardLayout = ({  }) => {
         />
     ) }} 
          />
+         <Tabs.Screen
+         name="settings" options={{ title: "Settings", tabBarIcon:({focused})=>(
+        <Ionicons
+         size ={24}
+         //name={focused ? "create" : "create-outline"}
+         name={focused ? "settings-outline" : "settings-outline"}
+         color={focused ? theme.iconColorFocused : theme.iconColor}
+        />
+    ) }} 
+         />
           <Tabs.Screen
          name="dashboard" options={{ title: "Admin", tabBarIcon:({focused})=>(
         <Ionicons
@@ -59,12 +71,14 @@ const DashboardLayout = ({  }) => {
         />
     ) }} 
          />
+
          <Tabs.Screen
            name="books/[id]"
            options={{href:null}}
          />
   
    </Tabs>
+   </ThemeProvider>
 </UserOnly>
   );
 }
