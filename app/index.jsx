@@ -23,12 +23,16 @@ const Home = () => {
 
      <View style={styles.buttonContainer}>
   <Link href="/login" style={styles.loginbtn}>
+ 
   
-    <ThemedText>Login Page</ThemedText>
+     {/* <Ionicons name="log-in-outline" size={20} color="white" style={{ marginRight: 8,marginBottom:40 }} /> */}
+       <ThemedText>Login </ThemedText>
   </Link>
 
   <Link href="/register" style={styles.registerbtn}>
-    <ThemedText>Register Page</ThemedText>
+  
+    <ThemedText>Register </ThemedText>
+    {/* <Ionicons name="person-add-outline" size={20} color="white" style={{ marginRight: 8 }} /> */}
   </Link>
 </View>
 
@@ -47,6 +51,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center'
+  },
+  buttonContainer: {
+  flexDirection: 'row'
   },
   title: {
     fontWeight: 'bold',

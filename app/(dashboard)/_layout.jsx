@@ -49,6 +49,16 @@ const DashboardLayout = ({  }) => {
         />
     ) }} 
          />
+          <Tabs.Screen
+         name="dashboard" options={{ title: "Admin", tabBarIcon:({focused})=>(
+        <Ionicons
+         size ={24}
+         //name={focused ? "create" : "create-outline"}
+         name={focused ? "speedometer-outline" : "speedometer-outline"}
+         color={focused ? theme.iconColorFocused : theme.iconColor}
+        />
+    ) }} 
+         />
          <Tabs.Screen
            name="books/[id]"
            options={{href:null}}

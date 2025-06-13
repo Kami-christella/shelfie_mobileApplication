@@ -85,7 +85,7 @@ const Books = () => {
 
       <Spacer />
       <ThemedText title={true} style={styles.heading}>
-        Your Reading List
+      Books To Read 📚
       </ThemedText>
 
       <Spacer />
