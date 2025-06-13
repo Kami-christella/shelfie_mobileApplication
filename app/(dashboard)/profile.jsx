@@ -57,10 +57,15 @@ import Spacer from "../../components/Spacer"
 import ThemedText from "../../components/ThemedText"
 import ThemedView from "../../components/ThemedView"
 import ThemedButton from '../../components/ThemedButton'
+import { useRouter } from 'expo-router'
+
+
+
 
 const Profile = () => {
   const { logout, user } = useUser()
-  
+  const router = useRouter()
+
   if (!user) {
     return (
       <ThemedView style={styles.container}>
@@ -117,9 +122,9 @@ const Profile = () => {
 
           {/* Action Buttons */}
           <View style={styles.buttonContainer}>
-            <ThemedButton style={styles.primaryButton} onPress={() => {/* Navigate to books */}}>
-              <Text style={styles.primaryButtonText}>Browse Books</Text>
-            </ThemedButton>
+           <ThemedButton style={styles.primaryButton} onPress={() => router.push('/books')}>
+                 <Text style={styles.primaryButtonText}>Browse Books</Text>
+           </ThemedButton>
             
             <Spacer />
             
